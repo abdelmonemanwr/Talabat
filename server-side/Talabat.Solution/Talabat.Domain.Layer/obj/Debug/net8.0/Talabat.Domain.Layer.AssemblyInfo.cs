@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Talabat.Domain.Layer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ebd47b916102effb4790300e60076f7c4a896aa0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+421e96e513104efa7c08c578d72dd90db4a5fbcc")]
 [assembly: System.Reflection.AssemblyProductAttribute("Talabat.Domain.Layer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Talabat.Domain.Layer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
