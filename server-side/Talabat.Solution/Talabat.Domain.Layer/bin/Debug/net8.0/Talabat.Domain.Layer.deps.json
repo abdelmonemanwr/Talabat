@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Talabat.Domain.Layer/1.0.0": {
+        "runtime": {
+          "Talabat.Domain.Layer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Talabat.Domain.Layer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
