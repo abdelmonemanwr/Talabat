@@ -15,5 +15,7 @@ namespace Talabat.Domain.Layer.IRepositories
 
         Task<T?> GetByIdAsync(int id);
         Task<T?> GetByIdAsync(ISpecification<T> specifications);
+
+        Task<int> GetCountAsync(ISpecification<T> specifications);
     }
 }

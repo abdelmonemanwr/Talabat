@@ -9,3 +9,15 @@ C:\Users\Men3m\Desktop\projects\server-side\Talabat.Solution\Talabat.Service.Lay
 C:\Users\Men3m\Desktop\projects\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\refint\Talabat.Service.Layer.dll
 C:\Users\Men3m\Desktop\projects\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\Talabat.Service.Layer.pdb
 C:\Users\Men3m\Desktop\projects\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\ref\Talabat.Service.Layer.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\bin\Debug\net8.0\Talabat.Service.Layer.deps.json
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\bin\Debug\net8.0\Talabat.Service.Layer.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\bin\Debug\net8.0\Talabat.Service.Layer.pdb
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\Talabat.Service.Layer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\Talabat.Service.Layer.AssemblyInfoInputs.cache
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\Talabat.Service.Layer.AssemblyInfo.cs
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\Talabat.Service.Layer.csproj.CoreCompileInputs.cache
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\Talabat.Service.Layer.sourcelink.json
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\Talabat.Service.Layer.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\refint\Talabat.Service.Layer.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\Talabat.Service.Layer.pdb
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Service.Layer\obj\Debug\net8.0\ref\Talabat.Service.Layer.dll

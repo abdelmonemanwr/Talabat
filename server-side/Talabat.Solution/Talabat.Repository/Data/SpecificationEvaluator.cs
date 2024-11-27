@@ -15,6 +15,15 @@ namespace Talabat.Repository.Layer.Data
         {
             if (Specifications.Criteria != null)
                 EntryQuery = EntryQuery.Where(Specifications.Criteria);
+            
+            if (Specifications.OrderByAscendingExpression != null)
+                EntryQuery = EntryQuery.OrderBy(Specifications.OrderByAscendingExpression);
+            
+            if (Specifications.OrderByDescendingExpression != null)
+                EntryQuery = EntryQuery.OrderByDescending(Specifications.OrderByDescendingExpression);
+
+            if (Specifications.IsPaginationEnabled)
+                EntryQuery = EntryQuery.Skip(Specifications.SkippedAmount).Take(Specifications.TakenAmount);
 
             return Specifications.Includes.Aggregate(EntryQuery, (CurrentQuery, CurrentIncludeExpression)
                 => CurrentQuery.Include(CurrentIncludeExpression));

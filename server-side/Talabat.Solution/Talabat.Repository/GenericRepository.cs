@@ -29,7 +29,12 @@ namespace Talabat.Repository.Layer
 
         public async Task<T?> GetByIdAsync(ISpecification<T> specifications) =>
             await ApplySpecifications(specifications).FirstOrDefaultAsync();
-        
+
+        public async Task<int> GetCountAsync(ISpecification<T> specification)
+        {
+            return await ApplySpecifications(specification).CountAsync();
+        }
+
         private IQueryable<T> ApplySpecifications(ISpecification<T> specifications)
         {
             return SpecificationEvaluator<T>.GetQuery(_context.Set<T>(), specifications);

@@ -13,5 +13,15 @@ namespace Talabat.Domain.Layer.Specifications
         public Expression<Func<T, bool>>? Criteria { get; set; }
 
         public List<Expression<Func<T, object>>> Includes { get; set; }
+
+        public Expression<Func<T, object>>? OrderByAscendingExpression { get; set; }
+
+        public Expression<Func<T, object>>? OrderByDescendingExpression { get; set; }
+
+        public int SkippedAmount { get; set; }
+
+        public int TakenAmount { get; set; }
+
+        public bool IsPaginationEnabled { get; set; }
     }
 }

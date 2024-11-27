@@ -6,43 +6,61 @@ using Talabat.Domain.Layer.IRepositories;
 using Talabat.Domain.Layer.Specifications;
 using System.Linq.Expressions;
 using Talabat.APIs.DTOs;
+using Talabat.APIs.Helpers;
 using AutoMapper;
 namespace Talabat.APIs.Controllers
 {
+    [Consumes("application/json")]
+    [Produces("application/json")]
     [Route("api/[controller]")]
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IGenericRepository<Product> _productRepository;
         private readonly IMapper _mapper;
+        private readonly IGenericRepository<Product> _productRepository;
+        private readonly IGenericRepository<ProductType> _typeRepository;
+        private readonly IGenericRepository<ProductBrand> _brandRepository;
 
-        public ProductsController(IGenericRepository<Product> productRepository, IMapper mapper)
+        public ProductsController(IGenericRepository<Product> productRepository, IGenericRepository<ProductBrand> brandRepository, IGenericRepository<ProductType> typeRepository, IMapper mapper)
         {
-            _productRepository = productRepository;
             _mapper = mapper;
+            _typeRepository = typeRepository;
+            _brandRepository = brandRepository;
+            _productRepository = productRepository;
         }
 
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAllProducts()
+        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAllProducts([FromQuery]ProductSpecificationParams productSpecificationParams)
         {
-            //return Ok(await _productRepository.GetAllAsync());
+            var productsSpecifications = new ProductWithBrandAndTypeSpecifications(productSpecificationParams);
 
-            var specifications = new ProductWithBrandAndTypeSpecifications();
-            
-            var products = await _productRepository.GetAllAsync(specifications);
+            var products = await _productRepository.GetAllAsync(productsSpecifications);
 
-            //var productsDTO = _mapper.Map<IEnumerable<ProductDTO>>(products);
-            var productsDTO = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductDTO>>(products);
+            var count = await _productRepository.GetCountAsync(
+                new ProductWithBrandAndTypeSpecifications(
+                    new ProductSpecificationParams {
+                        BrandId = productSpecificationParams.BrandId,
+                        TypeId = productSpecificationParams.TypeId,
+                        Search = productSpecificationParams.Search,
+                    }
+                )
+             );
 
-            return Ok(productsDTO);
+            var result = new Pagination<ProductDTO>
+            {
+                PageIndex = productSpecificationParams.PageIndex,
+                PageSize = productSpecificationParams.PageSize,
+                Count = count,
+                Data = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductDTO>>(products),
+            };
+
+            return Ok(result);
         }
 
         [HttpGet("{id:int}")]
         public async Task<ActionResult<ProductDTO>> GetProductById(int id)
         {
-            //return Ok(await _productRepository.GetByIdAsync(id));
-
             var specifications = new ProductWithBrandAndTypeSpecifications(id);
 
             var product = await _productRepository.GetByIdAsync(specifications);
@@ -52,10 +70,19 @@ namespace Talabat.APIs.Controllers
                 return NotFound("Product not found");
             }
 
-            //var productDTO = _mapper.Map<Product, ProductDTO>(product);
-            var productDTO = _mapper.Map<ProductDTO>(product);
+            return Ok(_mapper.Map<ProductDTO>(product));
+        }
 
-            return Ok(productDTO);
+        [HttpGet("brands")]
+        public async Task<ActionResult<IEnumerable<ProductBrand>>> GetAllBrands()
+        {
+            return Ok(await _brandRepository.GetAllAsync());
+        }
+
+        [HttpGet("types")]
+        public async Task<ActionResult<IEnumerable<ProductType>>> GetAllTypes()
+        {
+            return Ok(await _typeRepository.GetAllAsync());
         }
     }
 }

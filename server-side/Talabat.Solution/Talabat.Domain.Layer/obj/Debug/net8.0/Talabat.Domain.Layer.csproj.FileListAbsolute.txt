@@ -9,3 +9,15 @@ C:\Users\Men3m\Desktop\projects\server-side\Talabat.Solution\Talabat.Domain.Laye
 C:\Users\Men3m\Desktop\projects\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\refint\Talabat.Domain.Layer.dll
 C:\Users\Men3m\Desktop\projects\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.pdb
 C:\Users\Men3m\Desktop\projects\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\ref\Talabat.Domain.Layer.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\bin\Debug\net8.0\Talabat.Domain.Layer.deps.json
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\bin\Debug\net8.0\Talabat.Domain.Layer.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\bin\Debug\net8.0\Talabat.Domain.Layer.pdb
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.AssemblyInfoInputs.cache
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.AssemblyInfo.cs
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.csproj.CoreCompileInputs.cache
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.sourcelink.json
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\refint\Talabat.Domain.Layer.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.pdb
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\ref\Talabat.Domain.Layer.dll

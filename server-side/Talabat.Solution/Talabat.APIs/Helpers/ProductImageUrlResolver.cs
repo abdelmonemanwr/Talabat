@@ -18,8 +18,7 @@ namespace Talabat.APIs.Helpers
             {
                 return $"{configuration["BaseApiUrl"]}/{source.ImageUrl}";
             }
-            //return "no image found";
-            return null;
+            return "no image found"; //return null;
         }
     }
 }
