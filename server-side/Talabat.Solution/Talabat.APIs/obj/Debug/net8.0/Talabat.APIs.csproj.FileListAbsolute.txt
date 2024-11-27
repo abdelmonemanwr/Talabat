@@ -347,3 +347,9 @@ D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\obj\D
 D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\obj\Debug\net8.0\Talabat.APIs.pdb
 D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\obj\Debug\net8.0\Talabat.APIs.genruntimeconfig.cache
 D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\obj\Debug\net8.0\ref\Talabat.APIs.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\bin\Debug\net8.0\Talabat.APIs.staticwebassets.endpoints.json
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\bin\Debug\net8.0\Pipelines.Sockets.Unofficial.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\bin\Debug\net8.0\StackExchange.Redis.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\obj\Debug\net8.0\staticwebassets.build.endpoints.json
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\obj\Debug\net8.0\staticwebassets\msbuild.Talabat.APIs.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.APIs\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

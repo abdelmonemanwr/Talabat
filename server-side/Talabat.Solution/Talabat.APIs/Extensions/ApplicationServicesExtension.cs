@@ -8,10 +8,12 @@ namespace Talabat.APIs.Extensions
     {
         public static IServiceCollection AddApplicationService(this WebApplicationBuilder builder) 
         {
-            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
-
             //builder.Services.AddAutoMapper(Profile => Profile.AddProfile(new MappingProfiles()));
             builder.Services.AddAutoMapper(typeof(MappingProfiles)); // Simple Way
+
+            builder.Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
+
+            builder.Services.AddScoped<IBasketRepository, BasketRepository>();
 
             #region Logger
             // Suppress SQL command logs

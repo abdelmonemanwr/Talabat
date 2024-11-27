@@ -3,16 +3,20 @@
   "WorkspaceRootPath": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.domain.layer\\specifications\\productwithbrandandtypespecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|solutionrelative:talabat.domain.layer\\specifications\\productwithbrandandtypespecifications.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{982E2898-4B98-416B-B4A2-555538D6F6E1}|Talabat.APIs\\Talabat.APIs.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.apis\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{982E2898-4B98-416B-B4A2-555538D6F6E1}|Talabat.APIs\\Talabat.APIs.csproj|solutionrelative:talabat.apis\\controllers\\basketcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{982E2898-4B98-416B-B4A2-555538D6F6E1}|Talabat.APIs\\Talabat.APIs.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{982E2898-4B98-416B-B4A2-555538D6F6E1}|Talabat.APIs\\Talabat.APIs.csproj|solutionrelative:talabat.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8659515A-210E-4E5B-86A8-AFAB048477F9}|Talabat.Repository\\Talabat.Repository.Layer.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.repository\\basketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8659515A-210E-4E5B-86A8-AFAB048477F9}|Talabat.Repository\\Talabat.Repository.Layer.csproj|solutionrelative:talabat.repository\\basketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{982E2898-4B98-416B-B4A2-555538D6F6E1}|Talabat.APIs\\Talabat.APIs.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.apis\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{982E2898-4B98-416B-B4A2-555538D6F6E1}|Talabat.APIs\\Talabat.APIs.csproj|solutionrelative:talabat.apis\\controllers\\productscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.domain.layer\\entities\\customerbasket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|solutionrelative:talabat.domain.layer\\entities\\customerbasket.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.domain.layer\\irepositories\\ibasketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|solutionrelative:talabat.domain.layer\\irepositories\\ibasketrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -22,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,41 +50,54 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.APIs\\Program.cs",
-              "RelativeDocumentMoniker": "Talabat.APIs\\Program.cs",
-              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.APIs\\Program.cs",
-              "RelativeToolTip": "Talabat.APIs\\Program.cs",
-              "ViewState": "AgIAAB8AAAAAAAAAAAAQwDEAAAAdAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T02:56:18.655Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "ProductWithBrandAndTypeSpecifications.cs",
-              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\Specifications\\ProductWithBrandAndTypeSpecifications.cs",
-              "RelativeDocumentMoniker": "Talabat.Domain.Layer\\Specifications\\ProductWithBrandAndTypeSpecifications.cs",
-              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\Specifications\\ProductWithBrandAndTypeSpecifications.cs*",
-              "RelativeToolTip": "Talabat.Domain.Layer\\Specifications\\ProductWithBrandAndTypeSpecifications.cs*",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAuwCQAAAAAAAAAAAAAAA==",
+              "Title": "BasketController.cs",
+              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.APIs\\Controllers\\BasketController.cs",
+              "RelativeDocumentMoniker": "Talabat.APIs\\Controllers\\BasketController.cs",
+              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.APIs\\Controllers\\BasketController.cs*",
+              "RelativeToolTip": "Talabat.APIs\\Controllers\\BasketController.cs*",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAuwBgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-27T02:21:57.67Z",
+              "WhenOpened": "2024-11-27T06:12:55.49Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "ProductsController.cs",
-              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.APIs\\Controllers\\ProductsController.cs",
-              "RelativeDocumentMoniker": "Talabat.APIs\\Controllers\\ProductsController.cs",
-              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.APIs\\Controllers\\ProductsController.cs",
-              "RelativeToolTip": "Talabat.APIs\\Controllers\\ProductsController.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAAAAABUAAAApAAAAAAAAAA==",
+              "Title": "CustomerBasket.cs",
+              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\Entities\\CustomerBasket.cs",
+              "RelativeDocumentMoniker": "Talabat.Domain.Layer\\Entities\\CustomerBasket.cs",
+              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\Entities\\CustomerBasket.cs",
+              "RelativeToolTip": "Talabat.Domain.Layer\\Entities\\CustomerBasket.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-26T19:03:43.476Z",
+              "WhenOpened": "2024-11-27T07:45:45.087Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IBasketRepository.cs",
+              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\IRepositories\\IBasketRepository.cs",
+              "RelativeDocumentMoniker": "Talabat.Domain.Layer\\IRepositories\\IBasketRepository.cs",
+              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\IRepositories\\IBasketRepository.cs",
+              "RelativeToolTip": "Talabat.Domain.Layer\\IRepositories\\IBasketRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T07:20:08.468Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "BasketRepository.cs",
+              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Repository\\BasketRepository.cs",
+              "RelativeDocumentMoniker": "Talabat.Repository\\BasketRepository.cs",
+              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Repository\\BasketRepository.cs",
+              "RelativeToolTip": "Talabat.Repository\\BasketRepository.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAuwBkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-27T05:30:55.945Z",
               "EditorCaption": ""
             }
           ]

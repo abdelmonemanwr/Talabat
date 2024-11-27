@@ -8,6 +8,7 @@ using Talabat.Repository.Layer.Data.Seeders;
 using Talabat.APIs.Helpers;
 using Talabat.APIs.Middlewares;
 using Talabat.APIs.Extensions;
+using StackExchange.Redis;
 
 namespace Talabat.APIs
 {
@@ -29,6 +30,19 @@ namespace Talabat.APIs
                     builder.Configuration.GetConnectionString("DefaultConnection")
                 )
             );
+
+            builder.Services.AddSingleton<IConnectionMultiplexer>(S => {
+                try
+                {
+                    string Redis = builder.Configuration.GetConnectionString("Redis")!;
+                    ConfigurationOptions ConnectionString = ConfigurationOptions.Parse(Redis, true);
+                    return ConnectionMultiplexer.Connect(ConnectionString);
+                }
+                catch (Exception ex)
+                {
+                    throw new Exception("Could not connect to Redis", ex);
+                }
+            });
 
             builder.AddApplicationService();  // extension method to cleanup services
 
