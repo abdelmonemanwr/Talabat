@@ -9,6 +9,7 @@ using Talabat.APIs.Helpers;
 using Talabat.APIs.Middlewares;
 using Talabat.APIs.Extensions;
 using StackExchange.Redis;
+using Talabat.Repository.Layer.Identity;
 
 namespace Talabat.APIs
 {
@@ -28,6 +29,12 @@ namespace Talabat.APIs
             builder.Services.AddDbContext<StoreContext>(
                 options => options.UseSqlServer(
                     builder.Configuration.GetConnectionString("DefaultConnection")
+                )
+            );
+
+            builder.Services.AddDbContext<AppIdentityDbContext>(
+                options => options.UseSqlServer(
+                    builder.Configuration.GetConnectionString("IdentityConnection")
                 )
             );
 
@@ -79,7 +86,11 @@ namespace Talabat.APIs
                 {
                     var context = scope.ServiceProvider.GetRequiredService<StoreContext>();
                     await context.Database.MigrateAsync();
+
                     await StoreContextSeeding.SeedingDataAsync(context, loggerFactory);
+
+                    var identityContext = scope.ServiceProvider.GetRequiredService<AppIdentityDbContext>();
+                    await identityContext.Database.MigrateAsync();
                 }
                 catch(Exception ex)
                 {

@@ -21,3 +21,4 @@ D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Lay
 D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\refint\Talabat.Domain.Layer.dll
 D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.pdb
 D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\ref\Talabat.Domain.Layer.dll
+D:\Learning\ITI\Projects\Talabat\server-side\Talabat.Solution\Talabat.Domain.Layer\obj\Debug\net8.0\Talabat.Domain.Layer.csproj.AssemblyReference.cache
