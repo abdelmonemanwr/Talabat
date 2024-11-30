@@ -1,0 +1,8 @@
+.vs/
+bin/
+obj/
+*.log
+*.bak
+*.json text eol=lf
+*.deps.json binary
+*.runtimeconfig.json binary
