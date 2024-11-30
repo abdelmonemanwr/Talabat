@@ -1,6 +1,0 @@
-*.json text eol=lf
-.vs/
-bin/
-obj/
-*.log
-*.bak
