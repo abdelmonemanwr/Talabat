@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{982E2898-4B98-416B-B4A2-555538D6F6E1}|Talabat.APIs\\Talabat.APIs.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{982E2898-4B98-416B-B4A2-555538D6F6E1}|Talabat.APIs\\Talabat.APIs.csproj|solutionrelative:talabat.apis\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8659515A-210E-4E5B-86A8-AFAB048477F9}|Talabat.Repository\\Talabat.Repository.Layer.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.repository\\identity\\appidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8659515A-210E-4E5B-86A8-AFAB048477F9}|Talabat.Repository\\Talabat.Repository.Layer.csproj|solutionrelative:talabat.repository\\identity\\appidentitydbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8659515A-210E-4E5B-86A8-AFAB048477F9}|Talabat.Repository\\Talabat.Repository.Layer.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.repository\\talabat.repository.layer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8659515A-210E-4E5B-86A8-AFAB048477F9}|Talabat.Repository\\Talabat.Repository.Layer.csproj|solutionrelative:talabat.repository\\talabat.repository.layer.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.domain.layer\\entities\\identity\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|solutionrelative:talabat.domain.layer\\entities\\identity\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|d:\\learning\\iti\\projects\\talabat\\server-side\\talabat.solution\\talabat.domain.layer\\entities\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{65E16CA4-5021-47CB-BA71-831D8CD4F565}|Talabat.Domain.Layer\\Talabat.Domain.Layer.csproj|solutionrelative:talabat.domain.layer\\entities\\identity\\applicationuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,60 +9,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": -1,
           "Children": [
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.APIs\\Program.cs",
-              "RelativeDocumentMoniker": "Talabat.APIs\\Program.cs",
-              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.APIs\\Program.cs",
-              "RelativeToolTip": "Talabat.APIs\\Program.cs",
-              "ViewState": "AgIAAEoAAAAAAAAAAAAQwFwAAAArAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T02:27:05.182Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "AppIdentityDbContext.cs",
-              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Repository\\Identity\\AppIdentityDbContext.cs",
-              "RelativeDocumentMoniker": "Talabat.Repository\\Identity\\AppIdentityDbContext.cs",
-              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Repository\\Identity\\AppIdentityDbContext.cs",
-              "RelativeToolTip": "Talabat.Repository\\Identity\\AppIdentityDbContext.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T02:21:44.136Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Talabat.Repository.Layer",
-              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Repository\\Talabat.Repository.Layer.csproj",
-              "RelativeDocumentMoniker": "Talabat.Repository\\Talabat.Repository.Layer.csproj",
-              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Repository\\Talabat.Repository.Layer.csproj",
-              "RelativeToolTip": "Talabat.Repository\\Talabat.Repository.Layer.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-11-30T02:21:15.814Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Address.cs",
-              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\Entities\\Identity\\Address.cs",
-              "RelativeDocumentMoniker": "Talabat.Domain.Layer\\Entities\\Identity\\Address.cs",
-              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\Entities\\Identity\\Address.cs",
-              "RelativeToolTip": "Talabat.Domain.Layer\\Entities\\Identity\\Address.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABkAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T02:03:22.796Z",
-              "EditorCaption": ""
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
@@ -105,17 +32,8 @@
               "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "ApplicationUser.cs",
-              "DocumentMoniker": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\Entities\\Identity\\ApplicationUser.cs",
-              "RelativeDocumentMoniker": "Talabat.Domain.Layer\\Entities\\Identity\\ApplicationUser.cs",
-              "ToolTip": "D:\\Learning\\ITI\\Projects\\Talabat\\server-side\\Talabat.Solution\\Talabat.Domain.Layer\\Entities\\Identity\\ApplicationUser.cs",
-              "RelativeToolTip": "Talabat.Domain.Layer\\Entities\\Identity\\ApplicationUser.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-30T02:01:56Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             }
           ]
         }
