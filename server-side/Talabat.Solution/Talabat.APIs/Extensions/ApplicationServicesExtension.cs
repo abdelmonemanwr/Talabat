@@ -3,6 +3,9 @@ using Talabat.APIs.Helpers;
 using Talabat.Domain.Layer.IRepositories;
 using Talabat.Repository.Layer;
 using Talabat.APIs.DTOs.ErrorsDTOs;
+using Talabat.Domain.Layer.IServices;
+using Talabat.Service.Layer.Tokens;
+
 namespace Talabat.APIs.Extensions
 {
     public static class ApplicationServicesExtension
@@ -15,6 +18,8 @@ namespace Talabat.APIs.Extensions
             Services.AddScoped(typeof(IGenericRepository<>), typeof(GenericRepository<>));
 
             Services.AddScoped<IBasketRepository, BasketRepository>();
+
+            Services.AddScoped<ITokenService, TokenService>();
 
             Services.Configure<ApiBehaviorOptions>(options =>
             {

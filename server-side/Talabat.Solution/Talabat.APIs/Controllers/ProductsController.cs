@@ -8,6 +8,7 @@ using System.Linq.Expressions;
 using Talabat.APIs.DTOs;
 using Talabat.APIs.Helpers;
 using AutoMapper;
+using Microsoft.AspNetCore.Authorization;
 namespace Talabat.APIs.Controllers
 {
     [Consumes("application/json")]
@@ -28,7 +29,6 @@ namespace Talabat.APIs.Controllers
             _brandRepository = brandRepository;
             _productRepository = productRepository;
         }
-
 
         [HttpGet]
         public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAllProducts([FromQuery]ProductSpecificationParams productSpecificationParams)

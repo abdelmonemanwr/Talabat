@@ -199,7 +199,7 @@ namespace Talabat.Repository.Layer.Identity.Migrations
                     b.HasIndex("AppUserId")
                         .IsUnique();
 
-                    b.ToTable("Address");
+                    b.ToTable("Address", (string)null);
                 });
 
             modelBuilder.Entity("Talabat.Domain.Layer.Entities.Identity.ApplicationUser", b =>

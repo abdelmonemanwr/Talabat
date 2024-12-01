@@ -13,7 +13,7 @@ using Talabat.Repository.Layer.Identity;
 using Microsoft.AspNetCore.Identity;
 using Talabat.Domain.Layer.Entities.Identity;
 using Microsoft.Extensions.DependencyInjection;
-
+using Talabat.Domain.Layer.IServices;
 
 namespace Talabat.APIs
 {
@@ -52,19 +52,19 @@ namespace Talabat.APIs
             #region Database Contexts Configuration
             builder.Services.AddDbContext<StoreContext>(
                 options => options.UseSqlServer(
-                    builder.Configuration.GetConnectionString("DefaultConnection")
-                    //,sqlOptions => sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(10), errorNumbersToAdd: null)
+                    builder.Configuration.GetConnectionString("DefaultConnection"), 
+                    sqlOptions => sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(10), errorNumbersToAdd: null)
                 )
             );
 
             builder.Services.AddDbContext<AppIdentityDbContext>(
                 options => options.UseSqlServer(
-                    builder.Configuration.GetConnectionString("IdentityConnection")
-                    //,sqlOptions => sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(10), errorNumbersToAdd: null)
+                    builder.Configuration.GetConnectionString("IdentityConnection"),
+                    sqlOptions => sqlOptions.EnableRetryOnFailure(maxRetryCount: 5, maxRetryDelay: TimeSpan.FromSeconds(10), errorNumbersToAdd: null)
                 )
             );
 
-            builder.Services.AddIdentityServices(); // extension method to cleanup services
+            builder.Services.AddIdentityServices(builder.Configuration); // extension method to cleanup services
             #endregion
 
             #region Redis

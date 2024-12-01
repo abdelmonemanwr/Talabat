@@ -18,9 +18,7 @@ namespace Talabat.Domain.Layer.Entities.Identity
         
         public string ZipCode { get; set; }
 
-        // name of person who lives in this address and can receive orders
-
-        public string FirstName { get; set; }
+        public string FirstName { get; set; } // name of person who lives in this address and can receive orders
 
         //public string LastName { get; set; }
 

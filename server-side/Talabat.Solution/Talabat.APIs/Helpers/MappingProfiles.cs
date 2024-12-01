@@ -18,6 +18,10 @@ namespace Talabat.APIs.Helpers
                 .ReverseMap();
             #endregion
 
+            #region Mapping Address to AddressDTO
+            CreateMap<Address, AddressDTO>().ReverseMap();
+            #endregion
+
             #region Mapping RegisterDTO to ApplicationUser
             CreateMap<RegisterDTO, ApplicationUser>()
             .ForMember(dest => dest.Email, op => op.MapFrom(src => src.Email))
@@ -33,6 +37,14 @@ namespace Talabat.APIs.Helpers
                 ZipCode = src.ZipCode,
                 State = src.State
             }));
+            #endregion
+
+            #region Mapping CustomerBasketDTO to CustomerBasket
+            CreateMap<CustomerBasketDTO, CustomerBasket>().ReverseMap();
+            #endregion
+
+            #region Mapping CustomerBasketItemDTO to CustomerBasketItem
+            CreateMap<BasketItemDTO, BasketItem>().ReverseMap();
             #endregion
         }
     }
