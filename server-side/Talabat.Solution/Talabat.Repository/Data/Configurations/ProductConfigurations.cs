@@ -10,7 +10,7 @@ using Talabat.Domain.Layer.Entities;
 
 namespace Talabat.Repository.Layer.Data.Configrations
 {
-    public class ProductConfigrations : IEntityTypeConfiguration<Product>
+    public class ProductConfigurations : IEntityTypeConfiguration<Product>
     {
         public void Configure(EntityTypeBuilder<Product> builder)
         {

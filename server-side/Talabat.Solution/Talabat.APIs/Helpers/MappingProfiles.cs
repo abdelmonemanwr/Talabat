@@ -3,6 +3,7 @@ using Talabat.APIs.DTOs;
 using Talabat.APIs.DTOs.AuthDTOs;
 using Talabat.Domain.Layer.Entities;
 using Talabat.Domain.Layer.Entities.Identity;
+using Talabat.Domain.Layer.Entities.Order_Aggregate;
 
 namespace Talabat.APIs.Helpers
 {
@@ -18,8 +19,12 @@ namespace Talabat.APIs.Helpers
                 .ReverseMap();
             #endregion
 
-            #region Mapping Address to AddressDTO
-            CreateMap<Address, AddressDTO>().ReverseMap();
+            #region Mapping Identity_Address to AddressDTO
+            CreateMap<Talabat.Domain.Layer.Entities.Identity.Address, AddressDTO>().ReverseMap();
+            #endregion
+
+            #region Mapping Order_Address to AddressDTO
+            CreateMap<Talabat.Domain.Layer.Entities.Order_Aggregate.Address, AddressDTO>().ReverseMap();
             #endregion
 
             #region Mapping RegisterDTO to ApplicationUser
@@ -28,7 +33,8 @@ namespace Talabat.APIs.Helpers
             .ForMember(dest => dest.PhoneNumber, op => op.MapFrom(src => src.PhoneNumber))
             .ForMember(dest => dest.DisplayName, op => op.MapFrom(src => src.DisplayName))
             .ForMember(dest => dest.UserName, op => op.MapFrom<UserNameResolver>())
-            .ForMember(dest => dest.Address, op => op.MapFrom(src => new Address {
+            .ForMember(dest => dest.Address, op => op.MapFrom(src => new Talabat.Domain.Layer.Entities.Identity.Address
+            {
                 City = src.City,
                 Street = src.Street,
                 Building = src.Building,
@@ -43,7 +49,7 @@ namespace Talabat.APIs.Helpers
             CreateMap<CustomerBasketDTO, CustomerBasket>().ReverseMap();
             #endregion
 
-            #region Mapping CustomerBasketItemDTO to CustomerBasketItem
+            #region Mapping BasketItemDTO to BasketItem
             CreateMap<BasketItemDTO, BasketItem>().ReverseMap();
             #endregion
         }

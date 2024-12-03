@@ -5,6 +5,8 @@ using Talabat.Repository.Layer;
 using Talabat.APIs.DTOs.ErrorsDTOs;
 using Talabat.Domain.Layer.IServices;
 using Talabat.Service.Layer.Tokens;
+using Talabat.Service.Layer.Orders;
+using Talabat.Repository.Layer.UnitOfWorks;
 
 namespace Talabat.APIs.Extensions
 {
@@ -21,13 +23,17 @@ namespace Talabat.APIs.Extensions
 
             Services.AddScoped<ITokenService, TokenService>();
 
+            Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
+            Services.AddScoped<IOrderService, OrderService>();
+
             Services.Configure<ApiBehaviorOptions>(options =>
             {
                 options.InvalidModelStateResponseFactory = ActionContext =>
                 {
                     var errors = ActionContext.ModelState
-                        .Where(e => e.Value.Errors.Count > 0)
-                        .SelectMany(x => x.Value.Errors)
+                        .Where(e => e.Value!.Errors.Count > 0)
+                        .SelectMany(x => x.Value!.Errors)
                         .Select(x => x.ErrorMessage).ToArray();
                     return new BadRequestObjectResult(new ErrorValidationRespose { Errors = errors });
                 };

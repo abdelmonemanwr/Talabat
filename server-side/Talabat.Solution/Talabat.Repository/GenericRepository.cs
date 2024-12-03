@@ -18,10 +18,20 @@ namespace Talabat.Repository.Layer
         public GenericRepository(StoreContext context) => 
             _context = context;
 
-        public async Task<IEnumerable<T>> GetAllAsync() => 
+        public async Task CreateAsync(T entity) =>
+            await _context.Set<T>().AddAsync(entity);
+
+        public void UpdateAsync(T entity) =>
+            _context.Set<T>().Update(entity);
+
+
+        public void DeleteAsync(T entity) =>
+            _context.Set<T>().Remove(entity);
+
+        public async Task<IReadOnlyList<T>> GetAllAsync() => 
             await _context.Set<T>().ToListAsync();
 
-        public async Task<IEnumerable<T>> GetAllAsync(ISpecification<T> specifications) => 
+        public async Task<IReadOnlyList<T>> GetAllAsync(ISpecification<T> specifications) => 
             await ApplySpecifications(specifications).ToListAsync();
 
         public async Task<T?> GetByIdAsync(int id) => 

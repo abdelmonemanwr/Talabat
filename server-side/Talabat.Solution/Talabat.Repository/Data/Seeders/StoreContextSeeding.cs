@@ -16,7 +16,8 @@ namespace Talabat.Repository.Layer.Data.Seeders
             new List<(IDataSeeder seeder, string fileName)>() { 
                 (new ProductTypeSeeder(), "types.json"), 
                 (new ProductBrandSeeder(), "brands.json"), 
-                (new ProductSeeder(), "products.json") 
+                (new ProductSeeder(), "products.json"),
+                (new DeliveryMethodSeeder(), "delivery.json")
             };
 
         public static async Task SeedingDataAsync(StoreContext context, ILoggerFactory loggerFactory)

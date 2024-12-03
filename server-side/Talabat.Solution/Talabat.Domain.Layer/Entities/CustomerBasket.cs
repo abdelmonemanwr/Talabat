@@ -9,7 +9,6 @@ namespace Talabat.Domain.Layer.Entities
 {
     public class CustomerBasket
     {
-        // This is the user's email address as the basket ID or GUID if the user is not authenticated
         public string Id { get; set; }
 
         public ICollection<BasketItem> Items { get; set; } = new List<BasketItem>();

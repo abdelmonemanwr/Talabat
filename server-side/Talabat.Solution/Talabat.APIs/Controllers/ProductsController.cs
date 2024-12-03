@@ -17,27 +17,23 @@ namespace Talabat.APIs.Controllers
     [ApiController]
     public class ProductsController : ControllerBase
     {
-        private readonly IMapper _mapper;
-        private readonly IGenericRepository<Product> _productRepository;
-        private readonly IGenericRepository<ProductType> _typeRepository;
-        private readonly IGenericRepository<ProductBrand> _brandRepository;
+        private readonly IUnitOfWork unit;
+        private readonly IMapper mapper;
 
-        public ProductsController(IGenericRepository<Product> productRepository, IGenericRepository<ProductBrand> brandRepository, IGenericRepository<ProductType> typeRepository, IMapper mapper)
+        public ProductsController(IUnitOfWork unit, IMapper mapper)
         {
-            _mapper = mapper;
-            _typeRepository = typeRepository;
-            _brandRepository = brandRepository;
-            _productRepository = productRepository;
+            this.unit = unit;
+            this.mapper = mapper;
         }
 
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<ProductDTO>>> GetAllProducts([FromQuery]ProductSpecificationParams productSpecificationParams)
+        public async Task<ActionResult<IReadOnlyList<ProductDTO>>> GetAllProducts([FromQuery]ProductSpecificationParams productSpecificationParams)
         {
             var productsSpecifications = new ProductWithBrandAndTypeSpecifications(productSpecificationParams);
 
-            var products = await _productRepository.GetAllAsync(productsSpecifications);
+            var products = await unit.Repository<Product>().GetAllAsync(productsSpecifications);
 
-            var count = await _productRepository.GetCountAsync(
+            var count = await unit.Repository<Product>().GetCountAsync(
                 new ProductWithBrandAndTypeSpecifications(
                     new ProductSpecificationParams {
                         BrandId = productSpecificationParams.BrandId,
@@ -52,7 +48,7 @@ namespace Talabat.APIs.Controllers
                 PageIndex = productSpecificationParams.PageIndex,
                 PageSize = productSpecificationParams.PageSize,
                 Count = count,
-                Data = _mapper.Map<IEnumerable<Product>, IEnumerable<ProductDTO>>(products),
+                Data = mapper.Map<IReadOnlyList<Product>, IReadOnlyList<ProductDTO>>(products),
             };
 
             return Ok(result);
@@ -63,26 +59,26 @@ namespace Talabat.APIs.Controllers
         {
             var specifications = new ProductWithBrandAndTypeSpecifications(id);
 
-            var product = await _productRepository.GetByIdAsync(specifications);
+            var product = await unit.Repository<Product>().GetByIdAsync(specifications);
 
             if (product == null)
             {
                 return NotFound("Product not found");
             }
 
-            return Ok(_mapper.Map<ProductDTO>(product));
+            return Ok(mapper.Map<ProductDTO>(product));
         }
 
         [HttpGet("brands")]
-        public async Task<ActionResult<IEnumerable<ProductBrand>>> GetAllBrands()
+        public async Task<ActionResult<IReadOnlyList<ProductBrand>>> GetAllBrands()
         {
-            return Ok(await _brandRepository.GetAllAsync());
+            return Ok(await unit.Repository<ProductBrand>().GetAllAsync());
         }
 
         [HttpGet("types")]
-        public async Task<ActionResult<IEnumerable<ProductType>>> GetAllTypes()
+        public async Task<ActionResult<IReadOnlyList<ProductType>>> GetAllTypes()
         {
-            return Ok(await _typeRepository.GetAllAsync());
+            return Ok(await unit.Repository<ProductType>().GetAllAsync());
         }
     }
 }
