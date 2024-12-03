@@ -31,21 +31,24 @@ namespace Talabat.APIs.Controllers
             Ok(await orderService.GetDeliveryMethodsAsync());
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<Order>>> GetAllOrders() => 
-            Ok(await orderService.GetUserOrdersAsync(User.FindFirstValue(ClaimTypes.Email)!));
+        public async Task<ActionResult<IReadOnlyList<OrderDataDTO>>> GetAllOrders()
+        {
+            var orders = await orderService.GetUserOrdersAsync(User.FindFirstValue(ClaimTypes.Email)!);
+            return Ok(mapper.Map<IReadOnlyList<Order>, IReadOnlyList<OrderDataDTO>>(orders));
+        }
        
         [HttpGet("{id}")]
-        public async Task<ActionResult<Order>> GetOrderById(int id)
+        public async Task<ActionResult<OrderDataDTO>> GetOrderById(int id)
         {
             var email = User.FindFirstValue(ClaimTypes.Email)!;
             var order = await orderService.GetUserOrderByIdAsync(email, id);
             if (order == null)
                 return NotFound("Order not found");
-            return Ok(order);
+            return Ok(mapper.Map<Order, OrderDataDTO>(order));
         }
 
         [HttpPost("create-new-order")]
-        public async Task<ActionResult<Order>> CreateOrder(OrderDTO orderDTO)
+        public async Task<ActionResult<OrderDataDTO>> CreateOrder(OrderDTO orderDTO)
         {
             var email = User.FindFirstValue(ClaimTypes.Email);
 
@@ -56,7 +59,7 @@ namespace Talabat.APIs.Controllers
             if (order == null)
                 return BadRequest("An error occurred while creating your order please try again later");
 
-            return Ok(order);
+            return Ok(mapper.Map<Order, OrderDataDTO>(order));
         }
     }
 }

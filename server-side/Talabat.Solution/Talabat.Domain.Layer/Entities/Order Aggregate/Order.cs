@@ -8,10 +8,7 @@ namespace Talabat.Domain.Layer.Entities.Order_Aggregate
 {
     public class Order: BaseEntity
     {
-        public Order()
-        {
-
-        }
+        public Order() { }
 
         public Order(string buyerEmail, Address shipToAddress, DeliveryMethod deliveryMethod, ICollection<OrderItem> orderItems, decimal subtotal)
         {
