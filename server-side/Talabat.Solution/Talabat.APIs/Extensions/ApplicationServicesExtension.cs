@@ -7,6 +7,7 @@ using Talabat.Domain.Layer.IServices;
 using Talabat.Service.Layer.Tokens;
 using Talabat.Service.Layer.Orders;
 using Talabat.Repository.Layer.UnitOfWorks;
+using Talabat.Service.Layer.Payments;
 
 namespace Talabat.APIs.Extensions
 {
@@ -21,11 +22,13 @@ namespace Talabat.APIs.Extensions
 
             Services.AddScoped<IBasketRepository, BasketRepository>();
 
+            Services.AddScoped<IPaymentService, PaymentService>();
+
+            Services.AddScoped<IOrderService, OrderService>();
+
             Services.AddScoped<ITokenService, TokenService>();
 
             Services.AddScoped<IUnitOfWork, UnitOfWork>();
-
-            Services.AddScoped<IOrderService, OrderService>();
 
             Services.Configure<ApiBehaviorOptions>(options =>
             {

@@ -15,5 +15,13 @@ namespace Talabat.Domain.Layer.Entities
 
         // Update constructor parameter name to match property name
         public CustomerBasket(string id) => Id = id;
+
+        public int? DeliveryMethodId { get; set; }
+
+        public decimal ShippingPrice { get; set; }
+
+        public string PaymentIntentId { get; set; }
+
+        public string ClientSecret { get; set; }
     }
 }
