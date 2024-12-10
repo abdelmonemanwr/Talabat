@@ -31,7 +31,18 @@ namespace Talabat.APIs
             builder.Services.AddSwaggerService(); // extension method to cleanup services
 
             builder.Services.AddApplicationService();  // extension method to cleanup services
-            
+
+            #region Cors
+            string angularOrigin = builder.Configuration["Audience"]!;
+            builder.Services.AddCors(
+                options => {
+                    options.AddPolicy("CorsPolicies", builder => {
+                        builder.AllowAnyHeader().AllowAnyMethod().WithOrigins(angularOrigin);
+                    });
+                }
+            );
+            #endregion
+
             #region Session Configuration
             builder.Services.AddSession(options =>
             {
@@ -108,11 +119,11 @@ namespace Talabat.APIs
 
             app.UseStaticFiles();
 
-            app.UseRouting();
-
             app.UseSession();
 
-            // Use Cors
+            app.UseRouting();
+
+            app.UseCors("CorsPolicies");
 
             app.UseAuthentication();
 

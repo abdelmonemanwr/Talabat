@@ -30,5 +30,14 @@ namespace Talabat.APIs.Controllers
 
             return Ok(basket);
         }
+        
+        [HttpPost("webhook")]
+        public async Task<IActionResult> StripeWebhook()
+        {
+            var json = await new StreamReader(Request.Body).ReadToEndAsync();
+            return Ok();
+        }
+
+
     }
 }

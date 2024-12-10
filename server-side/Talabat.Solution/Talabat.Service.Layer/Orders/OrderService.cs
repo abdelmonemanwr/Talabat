@@ -15,10 +15,12 @@ namespace Talabat.Service.Layer.Orders
     {
         private readonly IBasketRepository basketRepository;
         private readonly IUnitOfWork unit;
+        private readonly IPaymentService paymentService;
 
-        public OrderService(IBasketRepository basketRepository, IUnitOfWork unit) {
+        public OrderService(IBasketRepository basketRepository, IUnitOfWork unit, IPaymentService paymentService) {
             this.basketRepository = basketRepository;
             this.unit = unit;
+            this.paymentService = paymentService;
         }
 
         public async Task<IReadOnlyList<DeliveryMethod>> GetDeliveryMethodsAsync() =>
@@ -58,15 +60,23 @@ namespace Talabat.Service.Layer.Orders
 
                 var orderItem = new OrderItem(productItem.Price, item.Quantity, productItemOrder);
                 orderItems.Add(orderItem);
-
-                subTotal += (item.Quantity * productItem.Price);  // Calculate the subtotal of the order
+                // Calculate the subtotal of the order
+                subTotal += (item.Quantity * productItem.Price);
             }
 
             DeliveryMethod? deliveryMethod = await unit.Repository<DeliveryMethod>().GetByIdAsync(deliveryMethodId);
             if(deliveryMethod == null)
                 throw new Exception("Delivery method not found");
 
-            var order = new Order(buyerEmail, orderShippingAddress, deliveryMethod, orderItems, subTotal);
+            // check for any existing order with the same payment intent id
+            var existingOrder = await unit.Repository<Order>().GetByIdAsync(new OrderByPaymentIntentIdSpecifications(basket.PaymentIntentId));
+            if (existingOrder != null)
+            {
+                unit.Repository<Order>().DeleteAsync(existingOrder);
+                await paymentService.createOrUpdatePaymentIntent(basketId);
+            }
+
+            var order = new Order(buyerEmail, orderShippingAddress, deliveryMethod, orderItems, subTotal, basket.PaymentIntentId);
 
             await unit.Repository<Order>().CreateAsync(order);
 
